@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,14 @@
 </head>
 <body>
     <h1>Start Your Live Stream</h1>
-    
+
+    <!-- Live Preview Section -->
+    <h2>Live Preview</h2>
+    <video id="localVideo" autoplay muted></video>
+    <button onclick="startPreview()">Start Preview</button>
+
+    <!-- Live Streaming Section -->
+    <h2>Live Streaming</h2>
     <label for="streamUrl">Stream URL:</label>
     <input type="text" id="streamUrl" placeholder="Enter stream URL">
 
@@ -51,9 +59,9 @@
     </select>
 
     <button onclick="updateTextOverlay()">Update Text Overlay</button>
-
     <button onclick="startStreaming()">Start Streaming</button>
 
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.6.1/dist/peerjs.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
